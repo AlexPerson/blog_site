@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+#Add example Post to the database and display on the first page of the Blog
+posts = Post.create([{title: 'EXAMPLE POST TITLE',
+      description: 'EXAMPLE POST DESCRIPTION',
+         username: 'EXAMPLE USERNAME'}])

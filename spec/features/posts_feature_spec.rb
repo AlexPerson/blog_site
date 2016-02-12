@@ -20,3 +20,16 @@ context 'posts have been added' do
     expect(page).not_to have_content('No posts yet')
   end
 end
+
+context 'creating posts' do
+  scenario 'prompts user to fill out a form, then displays the new post' do
+    visit '/posts'
+    click_link 'Add a post'
+    fill_in 'Title', with: "I\'m a POST!"
+    fill_in 'Description', with: "Ooooh how descriptive..."
+    click_button 'Create Post'
+    expect(page).to have_content 'I\'m a POST!'
+    expect(page).to have_content 'Ooooh how descriptive...'
+    expect(current_path).to eq '/posts'
+  end
+end

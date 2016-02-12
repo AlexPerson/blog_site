@@ -52,3 +52,5 @@ group :test do
 end
 
 gem 'haml'
+
+gem 'devise'

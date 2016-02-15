@@ -56,3 +56,5 @@ end
 gem 'haml'
 
 gem 'devise'
+
+gem 'rails-api'

@@ -57,4 +57,12 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  namespace :api do
+    namespace :xml, defaults: {format: :xml} do
+      resources :posts
+    end
+    namespace :json, defaults: {format: :json} do
+      resources :posts
+    end
+  end
 end

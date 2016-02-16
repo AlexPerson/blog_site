@@ -1,8 +1,13 @@
-- if @posts.any?
-  - @posts.reverse.each do |post|
-    %h2= post.title
-    %h3= post.description
-    %h3= post.username
-- else
-  %h1 No posts yet!
-  %a(href="posts/new") Add a post
+.col-xs-12
+  - if @posts.any?
+    - @posts.reverse.each do |post|
+      .panel-default
+        .panel-heading
+          .panel-title
+            %h2= post.title
+          .panel-body
+            %h3= post.description
+          %p written by #{post.username}
+  - else
+    %h1 No posts yet!
+    %a(href="posts/new") Add a post
